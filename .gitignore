@@ -11,3 +11,5 @@
 /bin_*
 /common/includes/version_rev.h
 /.vs
+/build_ffmpeg_u.sh
+/copylib_ffmpeg_u.sh
