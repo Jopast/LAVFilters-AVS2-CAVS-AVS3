@@ -35,6 +35,9 @@ typedef struct
 // clang-format off
 // Map Media Subtype <> FFMPEG Codec Id
 static const FFMPEG_SUBTYPE_MAP lavc_video_codecs[] = {
+  //AVS3
+  { &MEDIASUBTYPE_AVS3, AV_CODEC_ID_AVS3 },
+
   //AVS2
   { &MEDIASUBTYPE_AVS2, AV_CODEC_ID_AVS2 },
 
@@ -51,8 +54,8 @@ static const FFMPEG_SUBTYPE_MAP lavc_video_codecs[] = {
   { &MEDIASUBTYPE_CCV1, AV_CODEC_ID_H264 }, // Used by Haali Splitter
   { &MEDIASUBTYPE_H264_bis, AV_CODEC_ID_H264}, // MainConcept specific
 
-  { &MEDIASUBTYPE_AMVC, AV_CODEC_ID_H264_MVC },
-  { &MEDIASUBTYPE_MVC1, AV_CODEC_ID_H264_MVC },
+  //{ &MEDIASUBTYPE_AMVC, AV_CODEC_ID_H264_MVC },
+  //{ &MEDIASUBTYPE_MVC1, AV_CODEC_ID_H264_MVC },
 
   // HEVC
   { &MEDIASUBTYPE_HEVC, AV_CODEC_ID_HEVC },
@@ -311,6 +314,9 @@ static const FFMPEG_SUBTYPE_MAP lavc_video_codecs[] = {
 
 // Define Input Media Types
 const AMOVIESETUP_MEDIATYPE CLAVVideo::sudPinTypesIn[] = {
+  //AVS3
+  { &MEDIATYPE_Video, &MEDIASUBTYPE_AVS3},
+
   //AVS2
   { &MEDIATYPE_Video, &MEDIASUBTYPE_AVS2},
 
@@ -619,6 +625,7 @@ AVCodecID FindCodecId(const CMediaType *mt)
 // Order is Important, has to be the same as the CC Enum
 // Also, the order is used for storage in the Registry
 static codec_config_t m_codec_config[] = {
+  { 1, { AV_CODEC_ID_AVS3 }},                                                // Codec_AVS3
   { 1, { AV_CODEC_ID_AVS2 }},                                                // Codec_AVS2
   { 1, { AV_CODEC_ID_CAVS }},                                                // Codec_CAVS
   { 1, { AV_CODEC_ID_H264 }},                                                // Codec_H264
