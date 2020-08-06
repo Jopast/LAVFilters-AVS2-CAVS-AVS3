@@ -39,6 +39,7 @@ CLAVFVideoHelper g_VideoHelper;
 // clang-format off
 static FormatMapping video_map[] = {
   { AV_CODEC_ID_AVS2,       &MEDIASUBTYPE_AVS2,         MKTAG('A','V','S','2'), &FORMAT_MPEG2Video},
+  { AV_CODEC_ID_CAVS,       &MEDIASUBTYPE_CAVS,         MKTAG('C','A','V','S'), &FORMAT_MPEG2Video},
   { AV_CODEC_ID_H263,       &MEDIASUBTYPE_H263,         0,                      nullptr },
   { AV_CODEC_ID_H263I,      &MEDIASUBTYPE_I263,         0,                      nullptr },
   { AV_CODEC_ID_H264,       &MEDIASUBTYPE_AVC1,         0,                      &FORMAT_MPEG2Video },

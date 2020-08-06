@@ -38,6 +38,9 @@ static const FFMPEG_SUBTYPE_MAP lavc_video_codecs[] = {
   //AVS2
   { &MEDIASUBTYPE_AVS2, AV_CODEC_ID_AVS2 },
 
+  //CAVS
+  { &MEDIASUBTYPE_CAVS, AV_CODEC_ID_CAVS },
+
   // H264
   { &MEDIASUBTYPE_H264, AV_CODEC_ID_H264 },
   { &MEDIASUBTYPE_h264, AV_CODEC_ID_H264 },
@@ -310,6 +313,9 @@ static const FFMPEG_SUBTYPE_MAP lavc_video_codecs[] = {
 const AMOVIESETUP_MEDIATYPE CLAVVideo::sudPinTypesIn[] = {
   //AVS2
   { &MEDIATYPE_Video, &MEDIASUBTYPE_AVS2},
+
+  //CAVS
+  { &MEDIATYPE_Video, &MEDIASUBTYPE_CAVS},
 
   // H264
   { &MEDIATYPE_Video, &MEDIASUBTYPE_H264 },
@@ -614,6 +620,7 @@ AVCodecID FindCodecId(const CMediaType *mt)
 // Also, the order is used for storage in the Registry
 static codec_config_t m_codec_config[] = {
   { 1, { AV_CODEC_ID_AVS2 }},                                                // Codec_AVS2
+  { 1, { AV_CODEC_ID_CAVS }},                                                // Codec_CAVS
   { 1, { AV_CODEC_ID_H264 }},                                                // Codec_H264
   { 2, { AV_CODEC_ID_VC1, AV_CODEC_ID_VC1IMAGE }},                           // Codec_VC1
   { 1, { AV_CODEC_ID_MPEG1VIDEO }, "mpeg1"},                                 // Codec_MPEG1

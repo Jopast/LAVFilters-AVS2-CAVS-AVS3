@@ -13,3 +13,8 @@
 /.vs
 /build_ffmpeg_u.sh
 /copylib_ffmpeg_u.sh
+/ffmpeg_old
+/copylib_ffmpeg_u32.sh
+/build_ffmpeg_u32.sh
+/thirdparty/64/lib/pkgconfig/uavs3d.pc
+/thirdparty/64/lib/libuavs3d.a
